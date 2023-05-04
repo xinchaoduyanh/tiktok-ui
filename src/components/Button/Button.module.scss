@@ -3,22 +3,25 @@
     display: inline-flex;
     font-size: 1.6rem;
     padding: 9px 16px;
-    font-weight: 700;
+    font-weight: 400;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'ProximaRegularNova', sans-serif;
+
     background-color: var(--white);
     text-decoration: none;
     border: 1px solid transparent;
     // user-select: none;
-    +.wrapper {
+    + .wrapper {
         margin-left: 8px;
     }
     &.disable {
         pointer-events: none;
-        opacity: .5;
+        opacity: 0.5;
     }
 }
-.icon + .title, .title + .icon {
+.icon + .title,
+.title + .icon {
     margin-left: 8px;
 }
 
@@ -33,10 +36,10 @@
     border-radius: 52px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(22, 24, 35, .12);
+    border-color: rgba(22, 24, 35, 0.12);
     background-color: rgba(255, 255, 255, 1);
-    &:hover{
-        border-color: rgba(22, 24, 35, .2);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
         background-color: rgba(255, 255, 255, 1);
     }
 }
@@ -44,7 +47,7 @@
     background-color: var(--primary);
     color: var(--white);
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
 .outline {
@@ -72,10 +75,6 @@
     min-width: 208px;
     padding: 14px 8px;
 }
-
-
-
-
 
 // .wrapper {
 //     display: inline-flex;

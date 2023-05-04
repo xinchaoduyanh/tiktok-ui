@@ -23,33 +23,33 @@ html {
 }
 //Font emmbeded
 @font-face {
-    font-family: ProximaNova;
+    font-family: ProximaRegularNova;
     src: url('/assests/fonts/Proxima-Nova-Regular.woff2');
     font-weight: 400px;
 }
 @font-face {
-    font-family: ProximaNova;
+    font-family: ProximaBoldNova;
     src: url('/assests/fonts/Proxima-Nova-Bold.woff2');
     font-weight: 700px;
 }
 @font-face {
-    font-family: ProximaNova;
+    font-family: ProximaSemiBoldNova;
     src: url('/assests/fonts/Proxima-Nova-Semibold.woff2');
     font-weight: 600px;
 }
 @font-face {
-    font-family: SofiaPro;
+    font-family: SofiaProBold;
     src: url('/assests/fonts/sofiapro-bold.woff2');
     font-weight: 700px;
 }
 @font-face {
-    font-family: SofiaPr;
+    font-family: SofiaProSemiBold;
     src: url('/assests/fonts/sofiapro-semibold.otf');
     font-weight: 600px;
 }
 //Custom
 body{
-    font-family: 'ProximaNova',sans-serif;
+    font-family: 'ProximaRegularNova',sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;

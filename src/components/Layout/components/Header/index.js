@@ -32,6 +32,9 @@ import Button from '~/components/Button';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '../../AccountItem';
 import Menu from '~/components/Popper/Menu/Index';
+import { UploadIcon } from '~/components/Icon';
+import Image from '~/components/Image';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
@@ -78,12 +81,7 @@ const MENU_ITEMS = [
 const currentUser = true;
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 0);
-    }, []);
+    
     //handleLogic
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
@@ -123,41 +121,16 @@ function Header() {
                 <div className={cx('logo')}>
                     <img src={images.logo}></img>
                 </div>
-                <HeadlessTippy
-                    interactive
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Accounts</h4>
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Search accounts and videos" spellCheck={false} />
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
 
-                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
-
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </HeadlessTippy>
+                {/* Search */}
+                <Search />
 
                 <div className={cx('action')}>
                     {currentUser ? (
                         <div>
                            <Tippy trigger='click' delay={[0,200]} content="Upload video">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudDownload}></FontAwesomeIcon>
+                                   <UploadIcon />
                                 </button>
                            </Tippy>
                             <button className={cx('action-btn')}>
@@ -177,7 +150,7 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu :  MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/eb59e38a3722b93d20141a47619b9261~c5_100x100.jpeg?x-expires=1682967600&x-signature=Gfw0GGc%2BPooCd7sR6W0kmlFvrgk%3D"
                                 alt="nguyen van a"
